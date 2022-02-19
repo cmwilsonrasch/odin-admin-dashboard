@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
   padding: 0;
   margin: 0;
+
+  font-family: 'Roboto', sans-serif;
 }
 
 :root {
@@ -9,9 +13,15 @@
   --tertiary-color: #ece8ef;
 }
 
+h1 {
+  font-size: 1.6rem;
+  margin-left: 10px;
+}
+
 body {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .container {
@@ -23,7 +33,58 @@ body {
 }
 
 .header {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: auto-fit 1fr 1fr;
   grid-area: 1 / 2 / 2 / 3;
+  align-items: center;
+  padding: 10px;
+}
+
+.status {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
+
+.status img {
+  justify-self: end;
+}
+
+.status input {
+  border: none;
+  border-radius: 20px;
+  background: var(--tertiary-color);
+  margin-left: 20px;
+  width: 90%;
+  height: 25px;
+}
+
+.header-small-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 65px;
+}
+
+.header-small-icon > * {
+  margin: 0 10px;
+}
+
+.header-large-icon {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  align-items: center;
+  margin-left: 45px;
+  gap: 20px;
+}
+
+.header-large-icon p {
+  font-size: 0.6rem;
+}
+
+.header-large-icon span {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .profile-icon-small {
@@ -34,13 +95,86 @@ body {
   width: 4rem;
 }
 
+button {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  width: 100px;
+  height: 40px;
+  margin-left: 25px;
+}
+
+button:hover {
+  background: blue;
+  cursor: pointer;
+}
+
+.logo {
+  margin-bottom: 50px;
+}
+
+.logo img {
+  width: 3rem;
+}
+
 .menu {
   background: var(--primary-color);
   color: #fff;
   grid-row: 1 / 3;
+  padding: 10px;
+}
+
+.menu .home {
+  margin-top: 50px;
+}
+
+.menu > div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 5fr;
+  margin-bottom: 10px;
+}
+
+.menu div div {
+  display: block;
+  align-items: center;
+  width: 50px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.menu a:visited {
+  color: #fff;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu .tools {
+  display: block;
+  margin-top: 50px;
+}
+
+.menu .tools > div {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  margin-bottom: 10px;
+}
+
+.menu .tools div div {
+  display: block;
+  width: 50px;
 }
 
 .menu svg {
+  display: block;
+  margin: 0 auto;
   fill: #fff;
 }
 
